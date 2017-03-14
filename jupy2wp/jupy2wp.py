@@ -166,9 +166,10 @@ if __name__ == '__main__':
         post = ""
        
     if args.nb:
-        post += nbc.export_html(nb = args.nb, 
-                                template_file = pathtpl, 
-                                config = c)[0]
+        post += nbc.export_by_name(nb = args.nb, 
+                                   template_file = pathtpl,
+                                   format_name = 'html',
+                                   config = c)[0]
     else:
         raise Exception(err_msg.format('nb'))
 
